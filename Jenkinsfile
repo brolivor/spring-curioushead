@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Docker Build") {
             steps {
-                sh 'docker build . -t madhurm54/curioushead-root-project:${BUILD_TIMESTAMP}'
+                sh 'docker build . -t madhurm54/curioushead-root-project:latest'
             }
         }
         stage("Publish to Nexus") {
