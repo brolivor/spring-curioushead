@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         PATH="/opt/maven/bin:$PATH"
-        DOCKEHUB_CREDENTIALS = credentials('dockerhub')
+        def BUILDVERSION = sh(script: "echo `date +%s`", returnStdout: true).trim()
     }
     stages {
         stage("Build & SonarQube analysis") {
@@ -29,7 +29,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: '192.168.1.164',
                     groupId: 'com.curioushead',
-                    version: '${env.BUILD_ID}-${env.BUILD_TIMESTAMP}',
+                    version: '$BUILDVERSION',
                     repository: 'http://192.168.1.164:8081/repository/curioushead-root-project-repository/',
                     credentialsId: 'nexus',
                     artifacts: [
