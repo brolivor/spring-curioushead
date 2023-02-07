@@ -23,7 +23,6 @@ pipeline {
         }
         stage("Publish to Nexus") {
             steps {
-                sh 'echo ${env.BUILD_ID}'
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
