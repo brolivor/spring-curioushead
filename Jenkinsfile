@@ -25,7 +25,7 @@ pipeline {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    nexusUrl: '192.168.1.164',
+                    nexusUrl: '192.168.1.164:8081',
                     groupId: 'com.curioushead',
                     version: "${BUILD_TIMESTAMP}",
                     repository: 'http://192.168.1.164:8081/repository/curioushead-root-project-repository/',
