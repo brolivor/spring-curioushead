@@ -28,7 +28,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: '192.168.1.164',
                     groupId: 'com.curioushead',
-                    version: '0.0.1',
+                    version: "\${BUILD_TIMESTAMP}",
                     repository: 'http://192.168.1.164:8081/repository/curioushead-root-project-repository/',
                     credentialsId: 'nexus',
                     artifacts: [
