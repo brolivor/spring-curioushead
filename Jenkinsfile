@@ -6,6 +6,7 @@ pipeline {
     }
     environment {
         PATH="/opt/maven/bin:$PATH"
+        DOCKEHUB_CREDENTIALS = credentials('dockerhub')
     }
     stages {
         stage("Build & SonarQube analysis") {
