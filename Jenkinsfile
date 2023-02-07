@@ -18,6 +18,8 @@ pipeline {
         stage("Docker Build") {
             steps {
                 sh 'docker build . -t madhurm54/curioushead-root-project:latest'
+                sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker push madhurm54/api-docker:latest'
             }
         }
         stage("Publish to Nexus") {
