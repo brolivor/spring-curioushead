@@ -19,7 +19,6 @@ pipeline {
         stage("Docker Build") {
             steps {
                 sh 'docker build . -t madhurm54/curioushead-root-project:latest'
-                sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
             }
         }
         stage("Publish to Nexus") {
@@ -38,7 +37,7 @@ pipeline {
                          file: 'my-service-' + version + '.jar',
                          type: 'jar']
                     ]
-                 )
+                )
             }
         }
         stage("Deploy to Kubernetes") {
