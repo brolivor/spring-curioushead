@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Docker Build") {
             steps {
-                sh 'docker build . -t madhurm54/curioushead-root-project:latest'
+                sh 'docker build . -t madhurm54/curioushead-root-project:${BUILD_TIMESTAMP}'
             }
         }
         stage("Publish to Nexus") {
@@ -28,7 +28,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: '192.168.1.164',
                     groupId: 'com.curioushead',
-                    version: '$BUILDVERSION',
+                    version: 'sh ${BUILD_TIMESTAMP}',
                     repository: 'http://192.168.1.164:8081/repository/curioushead-root-project-repository/',
                     credentialsId: 'nexus',
                     artifacts: [
