@@ -11,9 +11,9 @@ spec:
     app: spring-curioushead-root-project-app
   ports:
     - protocol: TCP
-      port: 8090
+      port: 8091
       name: http
-      nodePort: 30090
+      nodePort: 30091
 
 ---
 apiVersion: apps/v1
@@ -34,4 +34,4 @@ spec:
         - name: spring-curioushead-root-project-container
           image: madhurm54/curioushead-root-project:latest
           ports:
-            - containerPort: 8090
+            - containerPort: 8091

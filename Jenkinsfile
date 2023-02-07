@@ -26,32 +26,32 @@ pipeline {
         stage("Deploy to Kubernetes") {
             steps {
                 sshagent(['k8s-control-1']) {
-                    sh 'scp -o StrictHostKeyChecking=no services.yaml control-1@192.168.1.154:/home/control-1'
+                    sh 'scp -o StrictHostKeyChecking=no curioushead-root-project-services.yaml control-1@192.168.1.154:/home/control-1'
                     script {
                         try {
-                            sh 'ssh control-1@192.168.1.154 kubectl apply -f services.yaml'
+                            sh 'ssh control-1@192.168.1.154 kubectl apply -f curioushead-root-project-services.yaml'
                         } catch (error) {
-                            sh 'ssh control-1@192.168.1.154 kubectl create -f services.yaml'
+                            sh 'ssh control-1@192.168.1.154 kubectl create -f curioushead-root-project-services.yaml'
                         }
                     }
                 }
                 sshagent(['k8s-control-2']) {
-                    sh 'scp -o StrictHostKeyChecking=no services.yaml control-2@192.168.1.155:/home/control-2'
+                    sh 'scp -o StrictHostKeyChecking=no curioushead-root-project-services.yaml control-2@192.168.1.155:/home/control-2'
                     script {
                         try {
-                            sh 'ssh control-2@192.168.1.155 kubectl apply -f services.yaml'
+                            sh 'ssh control-2@192.168.1.155 kubectl apply -f curioushead-root-project-services.yaml'
                         } catch (error) {
-                            sh 'ssh control-2@192.168.1.155 kubectl create -f services.yaml'
+                            sh 'ssh control-2@192.168.1.155 kubectl create -f curioushead-root-project-services.yaml'
                         }
                     }
                 }
                 sshagent(['k8s-control-3']) {
-                    sh 'scp -o StrictHostKeyChecking=no services.yaml control-3@192.168.1.156:/home/control-3'
+                    sh 'scp -o StrictHostKeyChecking=no curioushead-root-project-services.yaml control-3@192.168.1.156:/home/control-3'
                     script {
                         try {
-                            sh 'ssh control-3@192.168.1.156 kubectl apply -f services.yaml'
+                            sh 'ssh control-3@192.168.1.156 kubectl apply -f curioushead-root-project-services.yaml'
                         } catch (error) {
-                            sh 'ssh control-3@192.168.1.156 kubectl create -f services.yaml'
+                            sh 'ssh control-3@192.168.1.156 kubectl create -f curioushead-root-project-services.yaml'
                         }
                     }
                 }
