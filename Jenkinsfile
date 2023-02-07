@@ -23,12 +23,13 @@ pipeline {
         }
         stage("Publish to Nexus") {
             steps {
+                sh 'echo ${env.BUILD_ID}'
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
                     nexusUrl: '192.168.1.164',
                     groupId: 'com.curioushead',
-                    version: '${env.BUILD_TIMESTAMP}',
+                    version: '${env.BUILD_ID}-${env.BUILD_TIMESTAMP}',
                     repository: 'http://192.168.1.164:8081/repository/curioushead-root-project-repository/',
                     credentialsId: 'nexus',
                     artifacts: [
