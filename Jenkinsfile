@@ -60,7 +60,7 @@ pipeline {
                     sh 'scp -o StrictHostKeyChecking=no curioushead-root-project-services.yaml control-2@192.168.1.155:/home/control-2'
                     script {
                         try {
-                            sh 'ssh control-1@192.168.1.154 ./refresh_deployment.sh'
+                            sh 'ssh control-2@192.168.1.154 ./refresh_deployment.sh'
                             sh 'ssh control-2@192.168.1.155 kubectl apply -f curioushead-root-project-services.yaml'
                         } catch (error) {
                             sh 'ssh control-2@192.168.1.155 kubectl create -f curioushead-root-project-services.yaml'
@@ -71,7 +71,7 @@ pipeline {
                     sh 'scp -o StrictHostKeyChecking=no curioushead-root-project-services.yaml control-3@192.168.1.156:/home/control-3'
                     script {
                         try {
-                            sh 'ssh control-1@192.168.1.154 ./refresh_deployment.sh'
+                            sh 'ssh control-3@192.168.1.154 ./refresh_deployment.sh'
                             sh 'ssh control-3@192.168.1.156 kubectl apply -f curioushead-root-project-services.yaml'
                         } catch (error) {
                             sh 'ssh control-3@192.168.1.156 kubectl create -f curioushead-root-project-services.yaml'
