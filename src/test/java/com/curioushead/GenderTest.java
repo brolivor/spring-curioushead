@@ -8,7 +8,7 @@ class GenderTest {
 
     @Test
     void valueOf() {
-        assertEquals(Gender.valueOf("MALE"), Gender.MALE);
-        assertEquals(Gender.valueOf("FEMALE"), Gender.FEMALE);
+        assertEquals(Gender.MALE, Gender.valueOf("MALE"));
+        assertEquals(Gender.FEMALE, Gender.valueOf("FEMALE"));
     }
 }

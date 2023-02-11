@@ -20,7 +20,7 @@ class StudentTest {
         assertEquals("Richa", student.getFirstName());
         assertEquals("Katiyar", student.getLastName());
         assertEquals("ricspics@gmail.com", student.getEmail());
-        assertEquals(Gender.valueOf("FEMALE"), Gender.FEMALE);
+        assertEquals(Gender.FEMALE, Gender.valueOf("FEMALE"));
         assertEquals("India", address.getCountry());
         assertEquals("Uttar Pradesh", address.getState());
         assertEquals("Aligarh", address.getCity());
