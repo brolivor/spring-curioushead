@@ -75,13 +75,14 @@
                 <version>${jacoco.version}</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
+                        <id>jacoco-initialize</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -101,9 +102,7 @@
         <jacoco.version>0.8.8</jacoco.version>
         <sonar.host.url>http://192.168.1.162:9000</sonar.host.url>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-        <sonar.coverage.jacoco.xmlReportPaths>
-            ${project.basedir}/../target/site/jacoco-aggregate/jacoco.xml
-        </sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <sonar.language>java</sonar.language>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
