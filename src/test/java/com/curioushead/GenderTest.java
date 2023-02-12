@@ -10,5 +10,6 @@ class GenderTest {
     void valueOf() {
         assertEquals(Gender.MALE, Gender.valueOf("MALE"));
         assertEquals(Gender.FEMALE, Gender.valueOf("FEMALE"));
+        assertEquals(Gender.TRANSGENDER, Gender.valueOf("TRANSGENDER"));
     }
 }
