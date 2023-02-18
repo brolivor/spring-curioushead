@@ -7,6 +7,6 @@ public class RawDataViewDAO {
     private int id;
 
     public int getDataView() {
-        return this.id = 1;
+        return this.id = 7;
     }
 }

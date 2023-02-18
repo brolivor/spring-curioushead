@@ -19,6 +19,6 @@ class RawDataViewControllerTest {
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("/raw-data-view")).andDo(print()).andExpect(status().isOk()).equals(1);
+        this.mockMvc.perform(get("/raw-data-view")).andDo(print()).andExpect(status().isOk()).equals(7);
     }
 }
