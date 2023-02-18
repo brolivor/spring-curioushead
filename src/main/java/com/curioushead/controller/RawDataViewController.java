@@ -1,17 +1,23 @@
 package com.curioushead.controller;
 
-import com.curioushead.repository.RawDataViewDAO;
+import com.curioushead.model.RawDataViewModel;
+import com.curioushead.repository.DataViewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RawDataViewController {
+    private final DataViewRepository dataViewRepository;
     @Autowired
-    RawDataViewDAO dataViewDAO;
+    public RawDataViewController(DataViewRepository dataViewRepository) {
+        this.dataViewRepository = dataViewRepository;
+    }
 
-    @GetMapping(path="/raw-data-view", produces="application/json")
-    public int getDataViewModel() {
-        return dataViewDAO.getDataView();
+    @PostMapping(value = "/raw-data-view")
+    public String addUser(@RequestBody RawDataViewModel dataViewModel){
+        dataViewRepository.save(dataViewModel);
+        return "Data View created Successfully!!!";
     }
 }

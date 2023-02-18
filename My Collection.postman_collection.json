@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "457aa454-9531-495e-bdf5-ba1cfdf703f6",
+		"name": "My Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23508297"
+	},
+	"item": [
+		{
+			"name": "Add People",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Madhur\",\r\n    \"lastName\" : \"Bhandari\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raw Data View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pegasus.home.lan/raw-data-view",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"raw-data-view"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
