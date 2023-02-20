@@ -16,6 +16,7 @@ public class RawDataViewModel {
     @Id
     String name;
     String schema;
+    private static Random random = new Random();
 
     public static UUID generateType1UUID() {
         long most64SigBits = get64MostSignificantBitsForVersion1();
@@ -24,8 +25,8 @@ public class RawDataViewModel {
     }
 
     private static long get64LeastSignificantBitsForVersion1() {
-        Random random = new Random();
-        long random63BitLong = random.nextLong() & 0x3FFFFFFFFFFFFFFFL;
+        int rValue = random.nextInt();
+        long random63BitLong = rValue & 0x3FFFFFFFFFFFFFFFL;
         long variant3BitFlag = 0x8000000000000000L;
         return random63BitLong | variant3BitFlag;
     }
