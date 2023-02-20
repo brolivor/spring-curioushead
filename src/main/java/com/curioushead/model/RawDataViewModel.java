@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Random;
+import java.security.SecureRandom;
 import java.util.UUID;
 
 @Getter
@@ -16,7 +16,7 @@ public class RawDataViewModel {
     @Id
     String name;
     String schema;
-    private static Random random = new Random();
+    private static SecureRandom random = new SecureRandom();
 
     public static UUID generateType1UUID() {
         long most64SigBits = get64MostSignificantBitsForVersion1();
