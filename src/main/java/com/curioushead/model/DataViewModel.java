@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Document(collection = "profile_configuration")
-public class RawDataViewModel {
+public class DataViewModel {
     String id = generateType1UUID().toString();
     @Id
     String name;
