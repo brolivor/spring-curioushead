@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "3f93181d-a60f-449d-a0cf-06392a648502",
+		"name": "My Collection - Production",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23508297"
+	},
+	"item": [
+		{
+			"name": "RAW Data View",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"RAW_DOMAIN_SUB_DOMAIN_CSV\",\n    \"schema\": \"{\\\"_delimiter\\\":\\\"|\\\",\\\"column_1\\\":\\\"String\\\",\\\"column_2\\\":\\\"Integer\\\"}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STAN Data View",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"STAN_DOMAIN_SUB_DOMAIN_CSV\",\n    \"schema\": \"{\\\"type\\\":\\\"record\\\",\\\"name\\\":\\\"stan_csv_schema\\\",\\\"namespace\\\":\\\"com.curioushead\\\",\\\"fields\\\":[{\\\"name\\\":\\\"column_1\\\",\\\"type\\\":\\\"string\\\",\\\"default\\\":\\\"NONE\\\"},{\\\"name\\\":\\\"column_2\\\",\\\"type\\\":\\\"int\\\",\\\"default\\\":0}]}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NPUR Data View",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"NPUR_DOMAIN_SUB_DOMAIN_CSV\",\n    \"schema\": \"{\\\"type\\\":\\\"record\\\",\\\"name\\\":\\\"npur_csv_schema\\\",\\\"namespace\\\":\\\"com.curioushead\\\",\\\"fields\\\":[{\\\"name\\\":\\\"column_1\\\",\\\"type\\\":\\\"string\\\",\\\"default\\\":\\\"NONE\\\"},{\\\"name\\\":\\\"column_2\\\",\\\"type\\\":\\\"int\\\",\\\"default\\\":0}]}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RAW Data View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"RAW_DOMAIN_SUB_DOMAIN_CSV\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STAN Data View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"STAN_DOMAIN_SUB_DOMAIN_CSV\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NPUR Data View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"NPUR_DOMAIN_SUB_DOMAIN_CSV\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pegasus.home.lan/data-view-service",
+					"protocol": "http",
+					"host": [
+						"pegasus",
+						"home",
+						"lan"
+					],
+					"path": [
+						"data-view-service"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
