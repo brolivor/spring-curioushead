@@ -12,7 +12,7 @@ pipeline {
         stage("Build & SonarQube analysis") {
             steps {
                 withSonarQubeEnv('SonarQube Server') {
-                    sh 'mvn clean package sonar:sonar'
+                    sh 'mvn clean package spring-boot:repackage sonar:sonar'
                 }
             }
         }
