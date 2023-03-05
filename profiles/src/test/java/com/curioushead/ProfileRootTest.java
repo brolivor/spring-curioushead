@@ -2,9 +2,9 @@ package com.curioushead;
 
 import org.junit.jupiter.api.Test;
 
-class ApplicationRootTest {
+class ProfileRootTest {
     @Test
     void main() {
-        ApplicationRoot.main(new String[]{});
+        ProfileRoot.main(new String[]{});
     }
 }

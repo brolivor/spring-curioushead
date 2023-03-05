@@ -19,9 +19,9 @@ pipeline {
         stage("Docker Build") {
             steps {
                 sh 'docker rmi $(docker images -q)'
-                sh 'docker build . -t madhurm54/curioushead-root-project:latest'
+                sh 'docker build . -t madhurm54/curioushead-projects:latest'
                 sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
-                sh 'docker push madhurm54/curioushead-root-project:latest'
+                sh 'docker push madhurm54/curioushead-projects:latest'
             }
         }
         stage("Publish to Nexus") {
@@ -35,9 +35,9 @@ pipeline {
                     repository: 'curioushead-root-project-repository',
                     credentialsId: 'nexus',
                     artifacts: [
-                        [artifactId: 'curioushead-root-project',
+                        [artifactId: 'curioushead-projects',
                          classifier: '',
-                         file: 'target/curioushead-root-project-0.0.1.jar',
+                         file: 'target/curioushead-projects-0.0.1.jar',
                          type: 'jar']
                     ]
                 )
