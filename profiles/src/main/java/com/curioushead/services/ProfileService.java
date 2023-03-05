@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public record ProfileService(ProfileRepository profileRepository) {
-    private static final String INVALID = "Profile already exists!!!";
+    public static final String INVALID = "Profile already exists!!!";
     public String registerProfile(ProfileRegistrationRequest profileRegistrationRequest) {
         ProfileModel profileModel = ProfileModel.builder()
                 .name(profileRegistrationRequest.name())
