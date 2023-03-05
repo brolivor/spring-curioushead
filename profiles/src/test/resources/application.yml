@@ -4,14 +4,8 @@ server:
 spring:
   application:
     name: profiles
-  datasource:
-    url: jdbc:h2://mem:db;DB_CLOSE_DELAY=-1
-    username: sa
-    password: sa
-    driver-class-name: org.h2.Driver
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
+
+  # MongoDB config
   data:
     mongodb:
       authentication-database: curious_head_db
