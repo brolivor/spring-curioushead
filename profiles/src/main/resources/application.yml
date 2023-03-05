@@ -12,6 +12,6 @@ spring:
       username: rwuser
       password: YFaX&Z@RD4&*6mfG96N5
       database: curious_head_db
-      port: 27017
       host: 192.168.1.157
+      port: 27017
       auto-index-creation: true
