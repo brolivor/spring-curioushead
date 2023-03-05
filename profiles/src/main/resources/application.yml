@@ -1,0 +1,17 @@
+# App config
+server:
+  port: 8091
+spring:
+  application:
+    name: profiles
+
+# MongoDB config
+  data:
+    mongodb:
+      authentication-database: curious_head_db
+      username: rwuser
+      password: YFaX&Z@RD4&*6mfG96N5
+      database: curious_head_db
+      port: 27017
+      host: 192.168.1.157
+      auto-index-creation: true
