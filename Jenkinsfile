@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Docker Build") {
             steps {
-                sh 'if ![ z $(docker images -q) ]; then docker rmi $(docker images -q) fi'
+                sh 'if ![ z $(docker images -q) ]; then docker rmi $(docker images -q); fi'
                 sh 'docker build . -t madhurm54/curioushead-projects:latest'
                 sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push madhurm54/curioushead-projects:latest'
