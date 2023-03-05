@@ -37,7 +37,7 @@ pipeline {
                     artifacts: [
                         [artifactId: 'curioushead-projects',
                          classifier: '',
-                         file: 'target/curioushead-projects.jar',
+                         file: 'profiles/target/profiles-0.0.1.jar',
                          type: 'jar']
                     ]
                 )
