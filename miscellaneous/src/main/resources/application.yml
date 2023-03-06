@@ -1,0 +1,13 @@
+server:
+  port: 8092
+spring:
+  application:
+      name: miscellaneous
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://192.168.1.157:3306/miscellaneous
+    username: rwuser
+    password: YFaX&Z@RD4&*6mfG96N5
+    driver-class-name: com.mysql.cj.jdbc.Driver
