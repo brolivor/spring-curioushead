@@ -1,5 +1,13 @@
-FROM openjdk:19-alpine
-WORKDIR /opt/docker_images
-ARG JAR_FILE=profiles/target/profiles-*.jar
-COPY ${JAR_FILE} /curioushead-projects.jar
-ENTRYPOINT ["java", "-jar", "/curioushead-projects.jar"]
+FROM openjdk:19-alpine as builder
+RUN mkdir -p /opt/sources
+COPY . /opt/sources
+WORKDIR /opt/sources
+RUN ./mvnw clean package
+
+FROM builder
+COPY --from=builder /opt/sources/miscellaneous/target/*.jar miscellaneous.jar
+ENTRYPOINT ["java", "-jar", "/miscellaneous.jar"]
+
+FROM builder
+COPY --from=builder /opt/sources/profiles/target/*.jar profiles.jar
+ENTRYPOINT ["java", "-jar", "/profiles.jar"]
