@@ -8,6 +8,6 @@ EXPOSE 8091
 ENTRYPOINT ["java", "-jar", "/app/profiles.jar"]
 
 FROM builder
-COPY --from=builder /opt/sources/miscellaneous/target/*.jar /app/miscellaneous.jar
+COPY --from=builder /app/miscellaneous/target/*.jar /app/miscellaneous.jar
 EXPOSE 8092
 ENTRYPOINT ["java", "-jar", "/app/miscellaneous.jar"]
