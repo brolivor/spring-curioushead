@@ -41,7 +41,7 @@ pipeline {
                          type: 'jar'],
                          [artifactId: 'curioushead-services',
                          classifier: '',
-                         file: 'miscellaneous/target/profiles-0.0.1.jar',
+                         file: 'miscellaneous/target/miscellaneous-0.0.1.jar',
                          type: 'jar']
                     ]
                 )
