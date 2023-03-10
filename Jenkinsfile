@@ -35,11 +35,11 @@ pipeline {
                     repository: 'curioushead-root-project-repository',
                     credentialsId: 'nexus',
                     artifacts: [
-                        [artifactId: 'curioushead-services',
+                        [artifactId: 'curioushead-profiles',
                          classifier: '',
                          file: 'profiles/target/profiles-0.0.1.jar',
                          type: 'jar'],
-                         [artifactId: 'curioushead-services',
+                         [artifactId: 'curioushead-miscellaneous',
                          classifier: '',
                          file: 'miscellaneous/target/miscellaneous-0.0.1.jar',
                          type: 'jar']
