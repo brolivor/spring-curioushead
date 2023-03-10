@@ -2,7 +2,6 @@ FROM openjdk:19-alpine as builder
 RUN mkdir -p /opt/sources
 COPY . /opt/sources
 WORKDIR /opt/sources
-RUN ./mvnw clean package
 
 FROM builder
 COPY --from=builder /opt/sources/miscellaneous/target/*.jar miscellaneous.jar
