@@ -13,6 +13,11 @@
         <module>profiles</module>
         <module>miscellaneous</module>
     </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.4</version>
+    </parent>
 
     <dependencyManagement>
         <dependencies>
@@ -26,6 +31,11 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -42,15 +52,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring.boot.maven.plugin.version}</version>
                     <configuration>
-                        <mainClass>com.curioushead.ProfileRoot</mainClass>
+                        <mainClass>com.curioushead.miscellaneous.MiscellaneousRoot</mainClass>
                         <layout>JAR</layout>
                     </configuration>
                     <executions>
@@ -62,46 +73,34 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco.version}</version>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <mainClass>com.curioushead.miscellaneous.MiscellaneousRoot</mainClass>
+                        <mainClass>com.curioushead.profiles.ProfilesRoot</mainClass>
+                        <layout>JAR</layout>
+                    </configuration>
                     <executions>
                         <execution>
-                            <id>jacoco-initialize</id>
                             <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>jacoco-site</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>report</goal>
+                                <goal>repackage</goal>
                             </goals>
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M8</version>
-                </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
         <spring.boot.dependencies.version>3.0.4</spring.boot.dependencies.version>
-        <spring.boot.maven.plugin.version>3.0.4</spring.boot.maven.plugin.version>
         <jacoco.version>0.8.8</jacoco.version>
         <sonar.host.url>http://192.168.1.162:9000</sonar.host.url>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/profiles/target/site/jacoco-aggregate/jacoco.xml
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${project.basedir}/profiles/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
         <sonar.language>java</sonar.language>
-        <start-class>com.curioushead.ProfileRoot</start-class>
     </properties>
 </project>

@@ -1,8 +1,8 @@
-package com.curioushead.controllers;
+package com.curioushead.profiles.controllers;
 
-import com.curioushead.models.ProfileModel;
-import com.curioushead.records.ProfileRegistrationRequest;
-import com.curioushead.services.ProfileService;
+import com.curioushead.profiles.models.ProfileModel;
+import com.curioushead.profiles.records.ProfileRegistrationRequest;
+import com.curioushead.profiles.services.ProfileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

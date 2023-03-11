@@ -1,4 +1,4 @@
-package com.curioushead.models;
+package com.curioushead.profiles.models;
 
 import lombok.Builder;
 import lombok.Data;

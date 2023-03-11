@@ -1,8 +1,8 @@
-package com.curioushead.services;
+package com.curioushead.profiles.services;
 
-import com.curioushead.models.ProfileModel;
-import com.curioushead.records.ProfileRegistrationRequest;
-import com.curioushead.repositories.ProfileRepository;
+import com.curioushead.profiles.models.ProfileModel;
+import com.curioushead.profiles.records.ProfileRegistrationRequest;
+import com.curioushead.profiles.repositories.ProfileRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;

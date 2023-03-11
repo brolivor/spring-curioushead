@@ -1,6 +1,6 @@
-package com.curioushead.repositories;
+package com.curioushead.profiles.repositories;
 
-import com.curioushead.models.ProfileModel;
+import com.curioushead.profiles.models.ProfileModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface ProfileRepository extends MongoRepository<ProfileModel, String> {

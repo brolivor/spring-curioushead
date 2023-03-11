@@ -1,13 +1,13 @@
-package com.curioushead;
+package com.curioushead.profiles;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProfileRoot {
+public class ProfilesRoot {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProfileRoot.class, args);
+        SpringApplication.run(ProfilesRoot.class, args);
     }
 
 }
