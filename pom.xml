@@ -54,30 +54,6 @@
         </dependency>
     </dependencies>
 
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <configuration>
-                        <mainClass>com.curioushead.miscellaneous.MiscellaneousRoot</mainClass>
-                        <mainClass>com.curioushead.profiles.ProfilesRoot</mainClass>
-                        <layout>JAR</layout>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.dependencies.version>3.0.4</spring.boot.dependencies.version>
