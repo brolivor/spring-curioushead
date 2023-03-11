@@ -19,7 +19,7 @@ pipeline {
         stage("Docker Build") {
             steps {
                 sh 'if ![ z $(docker image ls -q) ]; then docker image rm -f $(docker image ls -q); fi'
-                sh 'docker-compose build . -t madhurm54/spring-curioushead-profiles:latest'
+                sh 'docker-compose build -t madhurm54/spring-curioushead-profiles:latest'
                 sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push madhurm54/curioushead-services:latest'
             }
