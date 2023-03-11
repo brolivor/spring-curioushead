@@ -4,7 +4,9 @@ services:
     build: profiles/
     ports:
       - "8091:8080"
+    image: madhurm54/spring-curioushead-profiles:latest
   miscellaneous:
     build: miscellaneous/
     ports:
       - "8092:8080"
+    image: madhurm54/spring-curioushead-miscellaneous:latest

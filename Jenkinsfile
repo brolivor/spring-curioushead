@@ -25,8 +25,8 @@ pipeline {
             steps {
                 sh 'docker compose build'
                 sh 'echo $DOCKEHUB_CREDENTIALS_PSW | docker login -u $DOCKEHUB_CREDENTIALS_USR --password-stdin'
-                sh 'docker push madhurm54/spring-curioushead-miscellaneous:latest'
-                sh 'docker push madhurm54/spring-curioushead-profiles:latest'
+                sh 'docker compose push miscellaneous'
+                sh 'docker compose push profiles'
             }
         }
         stage("Publish to Nexus") {
