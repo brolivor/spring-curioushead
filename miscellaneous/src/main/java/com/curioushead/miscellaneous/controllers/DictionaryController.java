@@ -1,6 +1,6 @@
 package com.curioushead.miscellaneous.controllers;
 
-import com.curioushead.miscellaneous.AddKeywordRequest;
+import com.curioushead.miscellaneous.records.AddKeywordRequest;
 import com.curioushead.miscellaneous.models.DictionaryModel;
 import com.curioushead.miscellaneous.repositories.DictionaryRepository;
 import lombok.extern.slf4j.Slf4j;
