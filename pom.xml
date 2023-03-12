@@ -62,7 +62,6 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <configuration>
                         <mainClass>com.curioushead.profiles.ProfilesRoot</mainClass>
-                        <mainClass>com.curioushead.miscellaneous.MiscellaneousRoot</mainClass>
                         <layout>JAR</layout>
                     </configuration>
                     <executions>
