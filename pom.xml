@@ -12,6 +12,7 @@
     <modules>
         <module>profiles</module>
         <module>miscellaneous</module>
+        <module>pipelines</module>
     </modules>
 
     <dependencyManagement>
