@@ -12,7 +12,7 @@ pipeline {
         stage("Build & SonarQube analysis") {
             steps {
                 withSonarQubeEnv('SonarQube Server') {
-                    sh 'org.springframework.boot:spring-boot-maven-plugin:repackage sonar:sonar'
+                    sh 'mvn org.springframework.boot:spring-boot-maven-plugin:repackage sonar:sonar'
                 }
             }
         }
