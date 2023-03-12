@@ -44,10 +44,22 @@ pipeline {
                          classifier: '',
                          file: 'profiles/target/profiles-0.0.1.jar',
                          type: 'jar'],
+                         [artifactId: 'curioushead-profiles',
+                         classifier: '',
+                         file: 'profiles/pom.xml',
+                         type: 'pom'],
                          [artifactId: 'curioushead-miscellaneous',
                          classifier: '',
                          file: 'miscellaneous/target/miscellaneous-0.0.1.jar',
-                         type: 'jar']
+                         type: 'jar'],
+                         [artifactId: 'curioushead-miscellaneous',
+                         classifier: '',
+                         file: 'miscellaneous/pom.xml',
+                         type: 'pom'],
+                         [artifactId: 'curioushead-services',
+                         classifier: '',
+                         file: 'pom.xml',
+                         type: 'pom'],
                     ]
                 )
             }
