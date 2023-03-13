@@ -1,6 +1,6 @@
 package com.curioushead.transformation.objectFactory;
 
-import com.curioushead.transformation.schema.SchemaParserImpl;
+import com.curioushead.transformation.schema.SchemaParser;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -13,10 +13,8 @@ public class SerializedSingleton implements Serializable {
     private SerializedSingleton() {
     }
 
-    public void setContext(String arg) {
-        SchemaParserImpl schemaParserImpl = new SchemaParserImpl();
-        schemaParserImpl.rawView = arg;
-        schemaParserImpl.readRawProfile(arg);
+    public void setContext(String profileName, String classOutputPath) {
+        SchemaParser.readRawProfile(profileName, classOutputPath);
     }
 
     private static class SingletonHelper {
