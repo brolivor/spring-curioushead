@@ -13,6 +13,9 @@
         <module>profiles</module>
         <module>miscellaneous</module>
         <module>pipelines</module>
+        <module>transformation</module>
+        <module>extraction</module>
+        <module>loading</module>
     </modules>
 
     <dependencyManagement>
